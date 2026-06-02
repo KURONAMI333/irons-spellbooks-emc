@@ -1,0 +1,63 @@
+{
+  "replace": false,
+  "comment": "Iron's Spells 'n Spellbooks EMC integration for ProjectE (KURONAMI). Stateless root materials only; vanilla recipes derive the rest. Spellbooks/scrolls/weapons/armor/upgrade-orbs/maps intentionally have no EMC. Fluid-based ink/elixir items are deferred (cauldron recipes are fluid-gated).",
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 256,
+        "id": "irons_spellbooks:arcane_essence"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 512,
+        "id": "irons_spellbooks:arcane_salvage"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 384,
+        "id": "irons_spellbooks:raw_mithril"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 65536,
+        "id": "irons_spellbooks:pyrium_ingot"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 1024,
+        "id": "irons_spellbooks:cinder_essence"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 256,
+        "id": "irons_spellbooks:hogskin"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "irons_spellbooks:dragonskin"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 2048,
+        "id": "irons_spellbooks:divine_pearl"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "irons_spellbooks:divine_soulshard"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 2048,
+        "id": "irons_spellbooks:energized_core"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 1024,
+        "id": "irons_spellbooks:permafrost_shard"
+      }
+    ]
+  }
+}
