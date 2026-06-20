@@ -1,0 +1,43 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="MIT"
+issueTrackerURL="https://github.com/KURONAMI333/irons-spellbooks-emc/issues"
+
+[[mods]]
+modId="irons_spellbooks_emc"
+version="0.1.0"
+displayName="Iron's Spellbooks ProjectE EMC"
+authors="KURONAMI"
+logoFile="irons_spellbooks_emc.png"
+displayURL="https://github.com/KURONAMI333/irons-spellbooks-emc"
+description='''
+Adds ProjectE EMC values to Iron's Spells 'n Spellbooks. Hand-tuned EMC for its core materials (arcane essence, mithril, pyrium and friends); most crafted gear derives automatically from vanilla recipes. Stateful items (spellbooks, scrolls, weapons, armor, upgrade orbs) intentionally have no EMC. Requires ProjectE and Iron's Spells 'n Spellbooks.
+'''
+
+[[dependencies.irons_spellbooks_emc]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.irons_spellbooks_emc]]
+    modId="forge"
+    mandatory=false
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.irons_spellbooks_emc]]
+    modId="projecte"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.irons_spellbooks_emc]]
+    modId="irons_spellbooks"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
