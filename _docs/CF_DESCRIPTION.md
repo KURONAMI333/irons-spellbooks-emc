@@ -17,4 +17,4 @@ It adds no items, blocks, or recipes — only EMC data. Values apply on world lo
 
 The fluid-based ink and elixir items (made in the Alchemist Cauldron) aren't valued in this first version. EMC values are a considered first pass; balance feedback is welcome on the issue tracker.
 
-MIT. Iron's Spells 'n Spellbooks is by Iron431 & Lab3; ProjectE by sinkillerj & contributors. Independent integration, not affiliated with either. Source and issues: https://github.com/KURONAMI333/irons-spellbooks-emc
+All Rights Reserved (free to put in any modpack, no permission or credit needed). Iron's Spells 'n Spellbooks is by Iron431 & Lab3; ProjectE by sinkillerj & contributors. Independent integration, not affiliated with either. Source and issues: https://github.com/KURONAMI333/irons-spellbooks-emc
