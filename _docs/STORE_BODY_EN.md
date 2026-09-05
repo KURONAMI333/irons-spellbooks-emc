@@ -12,7 +12,7 @@ It adds no items, blocks, or recipes — only EMC data. Values apply on world lo
 - [ProjectE](https://modrinth.com/mod/projecte) — required
 - [Iron's Spells 'n Spellbooks](https://modrinth.com/mod/irons-spellbooks) — required
 
-The fluid-based ink and elixir items (made in the Alchemist Cauldron) aren't valued in this first version. EMC values are a considered first pass; balance feedback is welcome on the issue tracker.
+The fluid-based ink and elixir items (made in the Alchemist Cauldron) aren't valued in this first version. EMC values are a considered first pass; balance feedback is welcome.
 
 Bugs and questions: comment on the CurseForge page, or DM @kuronami333 on X.
 
