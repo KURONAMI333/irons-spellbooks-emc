@@ -1,10 +1,10 @@
 {
-  "comment": "Iron's Spells 'n Spellbooks EMC integration for ProjectE (KURONAMI). Stateless root materials only; vanilla recipes derive the rest. Spellbooks/scrolls/weapons/armor/upgrade-orbs/maps intentionally have no EMC. Fluid-based ink/elixir items are deferred (cauldron recipes are fluid-gated).",
+  "comment": "Iron's Spells 'n Spellbooks EMC integration for ProjectE (KURONAMI). Stateless root materials only; vanilla recipes derive the rest. Spellbooks/scrolls/weapons/armor/upgrade-orbs/maps intentionally have no EMC. All five ink tiers are valued: common ink has no recipe (chest loot and wandering traders only), and the alchemist cauldron ladder above it is a fixed four-to-one per tier, so the tiers are set by hand with the emptied bottles accounted for. Elixirs stay unvalued: their base fluids are component-carrying potions, irons_spellbooks:blood has no item source, and the brew ratios differ per recipe.",
   "values": {
     "before": {
       "irons_spellbooks:arcane_essence": 256,
       "irons_spellbooks:arcane_salvage": 512,
-      "irons_spellbooks:raw_mithril": 384,
+      "irons_spellbooks:mithril_scrap": 384,
       "irons_spellbooks:pyrium_ingot": 65536,
       "irons_spellbooks:cinder_essence": 1024,
       "irons_spellbooks:hogskin": 256,
@@ -12,7 +12,12 @@
       "irons_spellbooks:divine_pearl": 2048,
       "irons_spellbooks:divine_soulshard": 4096,
       "irons_spellbooks:energized_core": 2048,
-      "irons_spellbooks:permafrost_shard": 1024
+      "irons_spellbooks:permafrost_shard": 1024,
+      "irons_spellbooks:common_ink": 64,
+      "irons_spellbooks:uncommon_ink": 256,
+      "irons_spellbooks:rare_ink": 1024,
+      "irons_spellbooks:epic_ink": 4096,
+      "irons_spellbooks:legendary_ink": 16384
     }
   }
 }

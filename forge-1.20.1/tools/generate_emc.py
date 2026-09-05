@@ -1,7 +1,9 @@
 """Generate data/irons_spellbooks/pe_custom_conversions/irons_spellbooks_emc.json
 for ProjectE on Minecraft 1.20.1 (PE1.0.1).
 
-Same EMC content as the 1.21.1 sibling, but ProjectE 1.20.1's CustomConversionFile
+Same EMC content as the 1.21.1 sibling except for arcane_salvage, which 1.20.1 registers
+and 1.21.1 does not (1.21.1 ships the assets but not the registration, so a value there only
+produces a load error). ProjectE 1.20.1's CustomConversionFile
 reads `values.before` as a MAP ({id: emc}), not the array-of-objects form used by
 ProjectE 1.21.1 (PE1.1.0). This generator emits the 1.20.1 map shape, grounded on
 ProjectE-1.20.1-PE1.0.1.jar's own bundled defaults.json / metals.json.
@@ -29,7 +31,9 @@ OUT = os.path.join(
 BEFORE = {
     "arcane_essence": 256,  # central crafting essence (loot/mob); many recipes consume it
     "arcane_salvage": 512,  # rarer salvage material
-    "raw_mithril": 384,  # mithril ore drop; anchors scrap->ingot->weave chain
+    # raw_mithril is in the raw_materials tag, which ProjectE forces to 0, so the
+    # chain is anchored one step downstream instead (blasting is 1:1, same value).
+    "mithril_scrap": 384,  # anchors scrap->ingot->weave; rings/talismans consume it directly
     "pyrium_ingot": 65536,  # end-game; blasts into 5 ancient_debris -> must exceed 5x debris (~61k) to block an EMC dupe
     "cinder_essence": 1024,  # fire essence
     "hogskin": 256,  # hide material
@@ -38,6 +42,11 @@ BEFORE = {
     "divine_soulshard": 4096,
     "energized_core": 2048,
     "permafrost_shard": 1024,
+    "common_ink": 64,  # loot-only root (chest loot / wandering traders); no recipe
+    "uncommon_ink": 256,  # cauldron ladder tier 1, fixed 4:1 above common; bottle return factored in
+    "rare_ink": 1024,  # cauldron ladder tier 2, fixed 4:1 above uncommon; bottle return factored in
+    "epic_ink": 4096,  # cauldron ladder tier 3, fixed 4:1 above rare; bottle return factored in
+    "legendary_ink": 16384,  # cauldron ladder tier 4, fixed 4:1 above epic; bottle return factored in
 }
 
 
@@ -47,7 +56,11 @@ def main() -> None:
             "Iron's Spells 'n Spellbooks EMC integration for ProjectE (KURONAMI). "
             "Stateless root materials only; vanilla recipes derive the rest. "
             "Spellbooks/scrolls/weapons/armor/upgrade-orbs/maps intentionally have no EMC. "
-            "Fluid-based ink/elixir items are deferred (cauldron recipes are fluid-gated)."
+            "All five ink tiers are valued: common ink has no recipe (chest loot and wandering "
+            "traders only), and the alchemist cauldron ladder above it is a fixed four-to-one per "
+            "tier, so the tiers are set by hand with the emptied bottles accounted for. Elixirs "
+            "stay unvalued: their base fluids are component-carrying potions, "
+            "irons_spellbooks:blood has no item source, and the brew ratios differ per recipe."
         ),
         "values": {
             "before": {f"irons_spellbooks:{k}": v for k, v in BEFORE.items()},
