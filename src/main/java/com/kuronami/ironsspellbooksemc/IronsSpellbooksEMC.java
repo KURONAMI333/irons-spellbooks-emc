@@ -14,10 +14,9 @@ import org.slf4j.Logger;
 @Mod(IronsSpellbooksEMC.MODID)
 public final class IronsSpellbooksEMC {
     public static final String MODID = "irons_spellbooks_emc";
-    public static final String VERSION = "0.1.0";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public IronsSpellbooksEMC(IEventBus modBus) {
-        LOGGER.info("Iron's Spellbooks ProjectE EMC v{} loading — EMC via data/irons_spellbooks/pe_custom_conversions", VERSION);
+        LOGGER.info("Iron's Spellbooks ProjectE EMC loading. EMC via data/irons_spellbooks/pe_custom_conversions");
     }
 }
